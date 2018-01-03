@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Author: Laurent Mignon
@@ -19,14 +18,14 @@
 #
 ##############################################################################
 
-from openerp import SUPERUSER_ID
+from odoo import SUPERUSER_ID
 
-import openerp
+import odoo
 import odoo.modules.registry
-from openerp import http
-from openerp.http import request
-from openerp.addons.web.controllers import main
-from openerp.addons.auth_from_http_remote_user.model import \
+from odoo import http
+from odoo.http import request
+from odoo.addons.web.controllers import main
+from odoo.addons.auth_from_http_remote_user.model import \
     AuthFromHttpRemoteUserInstalled
 from .. import utils
 
@@ -109,4 +108,4 @@ randrange = random.SystemRandom().randrange
 def randomString(length, chrs):
     """Produce a string of length random bytes, chosen from chrs."""
     n = len(chrs)
-    return ''.join([chrs[randrange(n)] for _ in xrange(length)])
+    return ''.join([chrs[randrange(n)] for _ in range(length)])
